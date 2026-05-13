@@ -1,5 +1,6 @@
 import tools.main.de.Calculator;
 import tools.main.de.Notes;
+import tools.main.de.WeatherWidget;
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,13 +24,14 @@ public class Main extends JFrame {
         JButton passwordGenerator = new JButton("Password Generator");
         JButton unitConverter = new JButton("Unit Converter");
         JButton clipboardManager = new JButton("Clipboard Manager");
-        JButton weatherWidget = new JButton("Weather Widget");
+        JButton weatherButton = new JButton("Weather Widget");
         JButton exitButton = new JButton("Exit");
 
         // Actions
         exitButton.addActionListener(e -> System.exit(0));
         calculatorButton.addActionListener(e -> openCalculator());
         notesButton.addActionListener(e -> openNotes());
+        weatherButton.addActionListener(e -> openWeather());
 
         sidebar.add(calculatorButton);
         sidebar.add(notesButton);
@@ -38,7 +40,7 @@ public class Main extends JFrame {
         sidebar.add(passwordGenerator);
         sidebar.add(unitConverter);
         sidebar.add(clipboardManager);
-        sidebar.add(weatherWidget);
+        sidebar.add(weatherButton);
         sidebar.add(exitButton);
 
         add(sidebar, BorderLayout.WEST);
@@ -47,11 +49,15 @@ public class Main extends JFrame {
     }
 
     public void openCalculator() {
-        new Calculator(); // only this is needed
+        new Calculator();
     }
 
     public void openNotes() {
         new Notes();
+    }
+
+    public void openWeather() {
+        new WeatherWidget();
     }
 
     public static void main(String[] args) {
