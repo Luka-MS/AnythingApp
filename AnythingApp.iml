@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="rsyntaxtextarea-3.6.2" level="project" />
+    <orderEntry type="library" name="json-20251224" level="project" />
   </component>
 </module>
